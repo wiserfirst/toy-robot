@@ -1,0 +1,16 @@
+#!/usr/bin/env ruby
+
+require_relative "robot/robot"
+
+module ToyRobot
+
+  def ToyRobot.main
+    # read commands from terminal, run simulation and collect results
+    results = Robot.simulate(readlines)
+    # print results to terminal
+    results.map { |result| puts result }
+  end
+
+end
+
+ToyRobot.main
